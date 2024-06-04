@@ -21,10 +21,10 @@ public class Main {
 
     public static String rubFormatter(Double rubles)
     {
-        if((Math.floor(rubles)%10) == 1)
+        if((Math.floor(rubles)%100) == 1)
         {
             return " рубль";
-        } else if((Math.floor(rubles)%10) > 1 && (rubles%10) < 5)
+        } else if((Math.floor(rubles)%100) > 1 && ((Math.floor(rubles%100)) < 5))
         {
             return " рубля";
         } else {
@@ -124,17 +124,5 @@ public class Main {
             {
                 System.out.println(COLOR_RED + "Ошибка: " + COLOR_RESET + " Необходимо ввести значение из множества натуральных чисел.");
             }
-    }
-}
-
-class GoodItem
-{
-    String name;
-    Double cost;
-
-    GoodItem(String name, Double cost)
-    {
-        this.name = name;
-        this.cost = cost;
     }
 }
